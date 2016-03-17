@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from menu import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/$','django.contrib.auth.views.login'),
+    url(r'^restaurant_list/', views.restaurant_list.as_view()),
+    url(r'^restaurant_menu/(?P<restaurant>[-_\w]+)/$', views.restaurant_menu.as_view(), name='restaurant')
+   # url(r'^logout/$',logout_page),
 ]
