@@ -1,0 +1,34 @@
+{% extends "apof.html"%}
+{% block header %}
+  <div id="nav">
+    {% if user.is_authenticated %}
+      Zalogowany użytkownik: <b>{{user.name}}</b>    <a href="/logout/">wyloguj się</a>    
+    {% else %}
+      <a href="/login/">zaloguj się</a>    
+    {% endif %}
+  </div>
+{% endblock %}
+{% block content %}
+<table>
+	   <th> Danie </th> 
+       <th> Skladniki </th>
+       <th> Cena </th>
+       <th> Rozmiar </th>
+       <th> Ocena </th>
+       
+	{% for member in members %}
+	<tr>
+       <td> {{member.dish }} </td>
+       <td> {{members.ingredient}} </td>
+       <td> <a href="//{{member.price}}">{{member.price}} </a></td>
+       <td> {{member.size}} </td>
+       <td> {{member.rating}} </td>
+       </tr>
+     {% endfor %}
+      </table>
+      
+     {% for member in members.ingredient %} 
+     {{ member }}
+     {% endfor %}
+     
+{% endblock %}

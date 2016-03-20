@@ -1,0 +1,28 @@
+{% extends "apof.html"%}
+{%block title%}
+restaurant menu
+{% endblock %}
+{% block header %}
+     User: <b>{{username}}</b>    <a href="/logout/">logout</a>    <br/>
+{% endblock %}
+{% block content %}
+List of orders
+
+<table border="5" >
+	   <th> User</th> 
+       <th> Dish </th>
+       <th> Date </th>
+      
+  
+       
+	{% for member in members %}
+	<tr>
+       <td> {{member.user }} </td>
+       <td> {{member.dish}} </td>
+       <td> {{members.date}} </td>
+       
+       {% endfor %}
+      </table>
+      
+        
+{% endblock %}

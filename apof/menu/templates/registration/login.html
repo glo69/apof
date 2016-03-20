@@ -1,6 +1,6 @@
 
 <center>
-<h2>Logowanie do APOF-MENU</h2>
+<h2>Welcome to APOF-MENU</h2>
 
 <p>
 <div style="margin-left:35%;margin-right:35%;">
@@ -8,12 +8,12 @@
     <form method="post" action=".">{% csrf_token %}
     <div style="text-align:left";>{{ form.as_p }}</div>
     <input type="hidden" name="next" value="/restaurant_list" />
-    <input type="submit" value="Logowanie"/>    <input type="reset" value="Wartości domyślne"/>
+    <input type="submit" value="Sign in"/>    <input type="reset" value="Default values"/>
   </form>
 </fieldset>
 </div>
 </center>  
 
 <p>
-<div style="text-align:center;"><a href="/">Strona główna</a></div>
+<div style="text-align:center;"><a href="/admin">Administrator panel</a></div>
 </p>
